@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University of Cabuyao</title>
+
+    <style>
+
+        /* ==============================
+           GENERAL SETTINGS
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           TOP BAR
+        ============================== */
+
+        .topbar {
+            background: #234F1E;
+            color: white;
+            padding: 9px 0;
+            font-size: 12px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar a {
+            margin-left: 20px;
+            color: #f1d77a;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        .header {
+            background: white;
+            border-bottom: 4px solid #c9a227;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-content {
+            min-height: 95px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* IMAGE 01 - UNIVERSITY LOGO */
+
+        .logo {
+            width: 65px;
+            height: 65px;
+            border: 3px solid #c9a227;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #234F1E;
+            font-weight: bold;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .university-name h1 {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 23px;
+        }
+
+        .university-name p {
+            font-size: 10px;
+            color: #777;
+            letter-spacing: 2px;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #333;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        nav a:hover {
+            color: #234F1E;
+            border-bottom: 2px solid #c9a227;
+        }
+
+        .menu {
+            display: none;
+            font-size: 28px;
+            color: #234F1E;
+            cursor: pointer;
+        }
+
+
+        /* ==============================
+           HERO / MAIN BANNER
+        ============================== */
+
+        .hero {
+            height: 620px;
+
+            /*
+                IMAGE 02
+                Replace "images/hero.jpg"
+                with one of your photos.
+            */
+
+            background-image:
+                linear-gradient(
+                    rgb(35, 79, 30),
+                    rgba(60, 5, 20, 0.35)
+                ),
+                url("images/hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 700px;
+        }
+
+        .hero-small {
+            color: #f1d77a;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+            line-height: 1.1;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .gold-button {
+            background: #c9a227;
+            color: #2d1c00;
+        }
+
+        .white-button {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .gold-button:hover {
+            background: #e4c34d;
+        }
+
+        .white-button:hover {
+            background: white;
+            color: #234F1E;
+        }
+
+
+        /* ==============================
+           QUICK LINKS
+        ============================== */
+
+        .quick-links {
+            background: #234F1E;
+            color: white;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .quick-box {
+            padding: 30px 20px;
+            border-right: 1px solid rgba(255,255,255,.2);
+        }
+
+        .quick-box:last-child {
+            border-right: none;
+        }
+
+        .quick-box h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 7px;
+        }
+
+        .quick-box p {
+            font-size: 12px;
+            color: #eadde1;
+        }
+
+        .quick-box:hover {
+            background: #234F1E;
+        }
+
+
+        /* ==============================
+           WELCOME / ABOUT
+        ============================== */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+
+            /* IMAGE 03 - CAMPUS */
+
+            min-height: 450px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,.1),
+                    rgba(0,0,0,.1)
+                ),
+                url("images/campus.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-label {
+            color: #c9a227;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 45px;
+            line-height: 1.2;
+            margin: 15px 0 25px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        .learn-more {
+            color: #234F1E;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+
+        /* ==============================
+           STATISTICS
+        ============================== */
+
+        .statistics {
+            background: #eee9df;
+            padding: 55px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat {
+            border-right: 1px solid #ccc;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h2 {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 40px;
+        }
+
+        .stat p {
+            color: #666;
+            font-size: 12px;
+        }
+
+
+        /* ==============================
+           ACADEMICS
+        ============================== */
+
+        .academics {
+            background: #f7f3eb;
+        }
+
+        .center-title {
+            text-align: center;
+            max-width: 650px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        .center-title p {
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .program {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .program-image {
+            height: 230px;
+            background: #ddd;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #777;
+            font-size: 12px;
+        }
+
+        /*
+            IMAGE 04 - COMPUTER SCIENCE
+            IMAGE 05 - EDUCATION
+            IMAGE 06 - BUSINESS
+        */
+
+        .program-info {
+            padding: 25px;
+        }
+
+        .program-info small {
+            color: #c9a227;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .program-info h3 {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            margin: 8px 0;
+        }
+
+        .program-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .program-info a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #234F1E;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           ADMISSIONS
+        ============================== */
+
+        .admissions {
+            background: #234F1E;
+            color: white;
+            padding: 75px 0;
+        }
+
+        .admission-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .admissions h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        .admissions p {
+            color: #eadde1;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           NEWS
+        ============================== */
+
+        .news {
+            background: white;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+        .news-image {
+            height: 220px;
+            background: #ddd;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #777;
+        }
+
+        /*
+            IMAGE 07 - NEWS
+            IMAGE 08 - EVENT
+            IMAGE 09 - ANNOUNCEMENT
+        */
+
+        .news-info {
+            padding: 25px;
+        }
+
+        .news-date {
+            color: #c9a227;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .news-info h3 {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .news-info p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .news-info a {
+            display: inline-block;
+            color: #234F1E;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+
+        /* ==============================
+           CAMPUS LIFE
+        ============================== */
+
+        .campus-life {
+            background: #f7f3eb;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-auto-rows: 190px;
+            gap: 12px;
+        }
+
+        .gallery-image {
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .gallery-large {
+            grid-row: span 2;
+        }
+
+        /*
+            IMAGE 10
+            IMAGE 11
+            IMAGE 12
+            IMAGE 13
+            IMAGE 14
+            IMAGE 15
+        */
+
+
+        /* ==============================
+           STUDENT LIFE
+        ============================== */
+
+        .student-life {
+            padding: 90px 0;
+        }
+
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .student-box {
+            padding: 35px;
+            border-top: 4px solid #234F1E;
+            background: #fafafa;
+        }
+
+        .student-box h3 {
+            color: #234F1E;
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .student-box p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact {
+            background: #eee9df;
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-info {
+            border-left: 4px solid #c9a227;
+            padding-left: 30px;
+        }
+
+        .contact-info div {
+            margin-bottom: 25px;
+        }
+
+        .contact-info strong {
+            color: #234F1E;
+        }
+
+        .contact-info p {
+            color: #666;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #234F1E;
+            color: white;
+        }
+
+        .footer-main {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-main h3 {
+            color: #f1d77a;
+            margin-bottom: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .footer-main p {
+            color: #bcaeb2;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .footer-main h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-main a {
+            display: block;
+            color: #bcaeb2;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .footer-main a:hover {
+            color: #f1d77a;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.15);
+            padding: 20px 0;
+            color: #9d8c91;
+            font-size: 11px;
+            text-align: center;
+        }
+
+
+        /* ==============================
+           RESPONSIVE / MOBILE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 95px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 15px 5%;
+                border-bottom: 1px solid #eee;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 48px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .program-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admission-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .header-content {
+                min-height: 80px;
+            }
+
+            .university-name h1 {
+                font-size: 16px;
+            }
+
+            .university-name p {
+                font-size: 8px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .hero {
+                height: 520px;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-large {
+                grid-row: span 1;
+            }
+
+            .student-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         TOP BAR
+    ========================================== -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <span>
+                UNIVERSITY OF CABUYAO
+            </span>
+
+            <div>
+                <a href="#">Students</a>
+                <a href="#">Faculty & Staff</a>
+                <a href="#">Alumni</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <div class="container header-content">
+
+            <div class="logo-area">
+
+                <!-- IMAGE 01 -->
+            <div class="logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_bBGLGxL3pmxszTpciNe6wsgr5_31Iamxy6PYgzVvk-OIbI20GVS8IuY&amp;s=10" jsaction="" class="sFlh5c FyHeAf YkEcKe" style="max-width: 1624px; width: 85px; height: 85px; margin: 0px;" jsname="kn3ccd" alt="University of Cabuyao Logo">
+            </div>
+
+                <div class="university-name">
+
+                    <h1>
+                        UNIVERSITY OF CABUYAO
+                    </h1>
+
+                    <p>
+                        EXCELLENCE • SERVICE • INTEGRITY
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu" onclick="openMenu()">
+                ☰
+            </div>
+
+
+            <nav id="navigation">
+
+                <a href="#home">HOME</a>
+
+                <a href="#about">ABOUT</a>
+
+                <a href="#academics">ACADEMICS</a>
+
+                <a href="#admissions">ADMISSIONS</a>
+
+                <a href="#news">NEWS</a>
+
+                <a href="#campus">CAMPUS LIFE</a>
+
+                <a href="#contact">CONTACT</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-small">
+                    WELCOME TO THE UNIVERSITY
+                </span>
+
+                <h2>
+                    Education that inspires.
+                    Excellence that lasts.
+                </h2>
+
+                <p>
+                    Discover a community where students are encouraged
+                    to learn, grow, lead, and create a meaningful impact
+                    in society.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#admissions"
+                       class="button gold-button">
+                        APPLY NOW
+                    </a>
+
+                    <a href="#about"
+                       class="button white-button">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         QUICK LINKS
+    ========================================== -->
+
+    <section class="quick-links">
+
+        <div class="container quick-grid">
+
+            <a href="#admissions" class="quick-box">
+
+                <h3>Admissions</h3>
+
+                <p>
+                    Start your university journey.
+                </p>
+
+            </a>
+
+
+            <a href="#academics" class="quick-box">
+
+                <h3>Academics</h3>
+
+                <p>
+                    Explore programs and courses.
+                </p>
+
+            </a>
+
+
+            <a href="#news" class="quick-box">
+
+                <h3>News & Events</h3>
+
+                <p>
+                    See what's happening on campus.
+                </p>
+
+            </a>
+
+
+            <a href="#" class="quick-box">
+
+                <h3>Student Portal</h3>
+
+                <p>
+                    Access student services.
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section class="section about" id="about">
+
+        <div class="container about-grid">
+
+
+            <!-- IMAGE 03 -->
+
+            <div class="about-image">
+                    <img src="https://newsinfo.inquirer.net/files/2025/02/2048px-PnC_Bagong_Cabuyao_Hall.jpg" jsaction="" class="sFlh5c FyHeAf YkEcKe" style="max-width: 2048px; width: 596px; height: 472px; margin: 0px;" alt="University of Cabuyao Campus" jsname="kn3ccd">
+            </div>
+
+
+            <div class="about-text">
+
+                <span class="section-label">
+                    ABOUT THE UNIVERSITY
+                </span>
+
+                <h2 class="section-title">
+                    Building futures through quality education
+                </h2>
+
+                <p>
+                    The University of Cabuyao is dedicated to providing
+                    students with quality education and meaningful
+                    opportunities for personal and professional growth.
+                </p>
+
+                <p>
+                    Our university community promotes academic excellence,
+                    innovation, leadership, and service while preparing
+                    students to become responsible members of society.
+                </p>
+
+                <a href="#" class="learn-more">
+                    DISCOVER OUR STORY →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         STATISTICS
+    ========================================== -->
+
+    <section class="statistics">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+
+                <h2>20+</h2>
+
+                <p>
+                    Academic Programs
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>10K+</h2>
+
+                <p>
+                    Students
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>100+</h2>
+
+                <p>
+                    Faculty Members
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h2>20+</h2>
+
+                <p>
+                    Years of Service
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ACADEMICS
+    ========================================== -->
+
+    <section class="section academics" id="academics">
+
+        <div class="container">
+
+            <div class="center-title">
+
+                <span class="section-label">
+                    ACADEMICS
+                </span>
+
+                <h2 class="section-title">
+                    Explore our programs
+                </h2>
+
+                <p>
+                    Discover academic programs designed to help students
+                    develop knowledge, skills, and confidence for their
+                    chosen careers.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-grid">
+
+
+                <!-- COMPUTER SCIENCE -->
+
+                <div class="program">
+
+                    <!-- IMAGE 04 -->
+
+                    <div class="program-image">
+                        <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people and text that says &quot;ለት 100/100 80/100 12,345 345 12 SAN ISIDRO ELEMENTARY SCHOOL 스 ----- PROJECT XP EXPRIE TT DIOITAL RNTNG PRTRRAL FARR © ACSS. f@ACSS.PNC PNC acssofficial.uc@gmail.com ucegms acssofficial.&quot;" style="width: 388; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/729099751_991465520179717_3086496127854549811_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1370&amp;ctp=s2048x1370&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeG0EcwHZ1iFXsO0yD1PNweEUbKO38lDlrNRso7fyUOWs6cIsny-iaKIHtQxDfSsjRqHeUaFHdlKMVFkbwXlvgKG&amp;_nc_ohc=W2j88GZgzKwQ7kNvwFVDUFi&amp;_nc_oc=AdqfhQr4Iy5m607hiil3VZkwlEc7PQ_uuQsGFv0x0pPgfkTgJTG-2QW7479wqGJujnk&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=UUMiLn3aiMDwIEYgifA-KQ&amp;_nc_ss=7b2a8&amp;oh=00_AQKmvL_GI8ZBjOEDaFCoXqp_MeM4LhwFHk_6U2MAx7JQnQ&amp;oe=6AAD2501">
+                    </div>
+
+                    <div class="program-info">
+
+                        <small>
+                            COLLEGE PROGRAM
+                        </small>
+
+                        <h3>
+                            Computer Science
+                        </h3>
+
+                        <p>
+                            Develop programming, problem-solving,
+                            software development, and technology skills.
+                        </p>
+
+                        <a href="#">
+                            VIEW PROGRAM →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDUCATION -->
+
+                <div class="program">
+
+                    <!-- IMAGE 05 -->
+
+                    <div class="program-image">
+                        <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of ‎lighting, speaker, dais and ‎text that says &quot;‎Auiuersity if Calıan (Pamantasanng-Gabuyao) (Pamantasanng cacиαo) COLLEGE COLLEGEOFEDUCATION OF EDUCATION SESSION 4 HANDA: TUNGO SA HANDA:TUNGOSA SA TEACHINGINTERNSHIP TEACHING INTERNSHIP Session4 PNC COLLEGEOF EDUCATION 文 PICOLICOFDICATIONOMCOEDSPNCE COEDSG@PN مد COEDSG@PNC.EDU.PH HANDA TUNGO SA TEACHING TUNGOSATEACHINGINTERNSHIP INTERNSHIP‎&quot;‎‎" style="width: 388px; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/764719925_1626408136161474_328354064329393165_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1920x1080&amp;ctp=s1920x1080&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_eui2=AeG6KkSQggenGBKIu0396Z0eGh3NlsV1bmEaHc2WxXVuYemmq_2eOxhA9G6eOenpIf8rBudqWufNDeDb52fWwaC4&amp;_nc_ohc=ECxyDCrwOQcQ7kNvwFoU_w_&amp;_nc_oc=Adq2VBiuz6fbvzxuzpXCnH47TwnmQfFgTLXaMpeeimKE3d5eyNmor30i5XK9pNRJuuk&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=DTwbfq_lOkRXa-7Rgq2omQ&amp;_nc_ss=7b2a8&amp;oh=00_AQIAkCyoJbcCEoTTjm4t7P793yofPqgRZEhLFBr0I9pJvA&amp;oe=6AAD2BB2">
+                    </div>
+
+                    <div class="program-info">
+
+                        <small>
+                            COLLEGE PROGRAM
+                        </small>
+
+                        <h3>
+                            Education
+                        </h3>
+
+                        <p>
+                            Prepare to become an effective educator
+                            through knowledge, practice, and experience.
+                        </p>
+
+                        <a href="#">
+                            VIEW PROGRAM →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUSINESS -->
+
+                <div class="program">
+
+                    <!-- IMAGE 06 -->
+
+                    <div class="program-image">
+                        <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people and text that says &quot;UNIVERSITY OF CABUYAO COLLEGEC FBUSINESS, CCOUNTANCY COLEFELINESCOANAN AND ADMINISTRATION College Student CollegeStudentGovernment Government COAASURENTCOVERTNS SCOUTS TUDENT GOVERNMENT CBAASTUDENT GBAA OATHTAKING OATH TAKING pncebaacsg J Jpnc.cbaacsg f cbaacsg@pnc.edu.ph&quot;" style="width: 388px; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/807843650_1565287245397336_6707174802624048933_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1366&amp;ctp=s2048x1366&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeH4sfSaRq2Cnga_uylV8foIp3J8bHUB0YSncnxsdQHRhNoCJh_iBZ3-Ang8U6VdLAso8XK0p_KgmLFXTnHF5HCR&amp;_nc_ohc=kw8fBpOjEpoQ7kNvwFDPZGC&amp;_nc_oc=AdolgIyc933WMnEh1ODo5DIf9H6Ge3tSqooWotL9Q4EYdFmVM2GxNGDVwJqOr2L3mJY&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=reLa2Uq2LTfVlUMONIJPVA&amp;_nc_ss=7b2a8&amp;oh=00_AQJX5hl_-kLEb2mjHa81jrXmaZIdsvX8UHUgKibvIyX9KA&amp;oe=6AAD2B21">
+                    </div>
+
+                    <div class="program-info">
+
+                        <small>
+                            COLLEGE PROGRAM
+                        </small>
+
+                        <h3>
+                            Business Administration
+                        </h3>
+
+                        <p>
+                            Build skills in management, entrepreneurship,
+                            marketing, and business operations.
+                        </p>
+
+                        <a href="#">
+                            VIEW PROGRAM →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ADMISSIONS
+    ========================================== -->
+
+    <section class="admissions" id="admissions">
+
+        <div class="container admission-grid">
+
+            <div>
+
+                <span class="section-label">
+                    ADMISSIONS
+                </span>
+
+                <h2>
+                    Your journey starts here.
+                </h2>
+
+                <p>
+                    Take the next step toward your academic and
+                    professional goals. Learn about application
+                    requirements, procedures, and important dates.
+                </p>
+
+            </div>
+
+
+            <a target="_blank" href="https://ienrol.pnc.edu.ph/" h="ID=SERP,5176.2"  class="button gold-button">
+                ADMISSION GUIDE
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         NEWS & EVENTS
+    ========================================== -->
+
+    <section class="section news" id="news">
+
+        <div class="container">
+
+            <div class="center-title">
+
+                <span class="section-label">
+                    UNIVERSITY UPDATES
+                </span>
+
+                <h2 class="section-title">
+                    News & Events
+                </h2>
+
+            </div>
+
+
+
+            <div class="news-grid">
+
+
+                <!-- NEWS 1 -->
+
+                <article class="news-card">
+
+                    <!-- IMAGE 07 -->
+
+                    <div class="news-image">
+                            <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="No photo description available." style="width: 388px; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/619723264_929627663342841_1006931651209140586_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1365&amp;ctp=s2048x1365&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeGeBzUd_O5vF88FXOGX5ZMb2TZTlMSSQAbZNlOUxJJABhYCPHSgPmYLzCEwIr2k8LPdHWxJ8f3QhAqJ8ELCCkxT&amp;_nc_ohc=fylQ8NISyfgQ7kNvwH_Sdgc&amp;_nc_oc=AdrJd8U0BPVFV-yyd1BNcNa3GtwkMM7pq1yH4sX6qrsiA2M7Sh7rwTyQrYFRTtj4mvE&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=LROt15t2Tem0ugq35ZKAig&amp;_nc_ss=7b2a8&amp;oh=00_AQI02Yua0xfLg62hNIdvqLNo1gbOkwYzpdHHV81wfd6zTA&amp;oe=6AAD2201">
+                    </div>
+
+                    <div class="news-info">
+
+                        <span class="news-date">
+                            SEPTEMBER 2026
+                        </span>
+
+                        <h3>
+                            University welcomes students
+                            for a new academic year
+                        </h3>
+
+                        <p>
+                            Discover the latest university announcements
+                            and campus updates.
+                        </p>
+
+                        <a href="#">
+                            READ MORE →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- NEWS 2 -->
+
+                <article class="news-card">
+
+                    <!-- IMAGE 08 -->
+
+                    <div class="news-image">
+                        <a href="images/events.jpg">
+                            <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people, people dancing, violin and text that says &quot;Shaun Piconada&quot;" style="width: 388px; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/796571373_122102849007468332_5637327047959392811_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1365&amp;ctp=s2048x1365&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeHjemTBRggtPKc00Ru1adOW6L5Wwo2DJfHovlbCjYMl8ZBVF2VafORdxUQ1QHXpN7M8oTY_nFXAKO3y1JBNEkU7&amp;_nc_ohc=6CQ5wJhVHLQQ7kNvwG_VQJ-&amp;_nc_oc=AdqkeKZhZdlBs-UtldWx0vRScixa0I3TdqRb4oZe7pjtlrVbO387kJlddkSYkoOU2j4&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=5j-5UPT_JcZ358MSjB-aVg&amp;_nc_ss=7b2a8&amp;oh=00_AQKDGKUE5EELjHeCOODRmo_XmDuCiiWfgBgly2yMGEMHHg&amp;oe=6AAD121B">
+                        </a>
+                    </div>
+
+                    <div class="news-info">
+
+                        <span class="news-date">
+                            SEPTEMBER 2026
+                        </span>
+
+                        <h3>
+                            Students participate in
+                            campus activities
+                        </h3>
+
+                        <p>
+                            Explore activities that bring students
+                            together outside the classroom.
+                        </p>
+
+                        <a href="#">
+                            READ MORE →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- NEWS 3 -->
+
+                <article class="news-card">
+
+                    <!-- IMAGE 09 -->
+
+                    <div class="news-image">
+                            <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be a graphic of text that says &quot;60 ASSOCIATION OF COMPUTER SCIENCESTUDENTS SCIENCE STUDENTS Biao uild with vision. idge the future. URIVERSITYOF CABUYAG CARUTADE CIFT.LACUNA Congratulations PROJECTXP for the successful presentation of the project's p ress ar nd daccomplishments during the Final Culminating Activity the Gawad Kampeon pard sa Kabataan ng Laguna 2025 held on July 4, 2026. UNIVERSITY CABUYAO,LAGUNA CABUYAO, AhuENSTN OF LAGUNA CABUYAO CABUNAO BO f ASSOC Associatior intion Computer Science Students PNC ACSS.PNC acssofficial.ucd@gmail.com&quot;" style="width: 388px; height: 232px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.99422-6/741592261_2293569044721082_66554873967318125_n.png?stp=dst-jpg_tt6&amp;cstp=mx3000x3750&amp;ctp=s3000x3750&amp;_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_eui2=AeGAiVm2337OCXQEIwjyRcFmnBHSIzWE56OcEdIjNYTno7SQrjLNUargO85fZKUUQFJomD4uEFXGvPtxO9vFolOJ&amp;_nc_ohc=L7lHGYS8UFkQ7kNvwHJDTyC&amp;_nc_oc=AdpIKDiOq6wWoxj8aCuqzAWB_bcwm7DSNw46HrETIRVHfrhBTE87vuFyagaWH1iv4iQ&amp;_nc_zt=14&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=acJArt1ee9UB6AdWBVS-sA&amp;_nc_ss=7b2a8&amp;oh=00_AQJFFuXfo5izfaCPzvoiOLXlixjbpYu-vQtCk8bcCoRIUw&amp;oe=6AAD2C0A">
+                    </div>
+
+                    <div class="news-info">
+
+                        <span class="news-date">
+                            SEPTEMBER 2026
+                        </span>
+
+                        <h3>
+                            Celebrating student achievements
+                        </h3>
+
+                        <p>
+                            We celebrate the dedication and accomplishments
+                            of our university community.
+                        </p>
+
+                        <a href="#">
+                            READ MORE →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CAMPUS LIFE / GALLERY
+    ========================================== -->
+
+    <section class="section campus-life" id="campus">
+
+        <div class="container">
+
+            <div class="center-title">
+
+                <span class="section-label">
+                    CAMPUS LIFE
+                </span>
+
+                <h2 class="section-title">
+                    Life at the University
+                </h2>
+
+                <p>
+                    Experience learning, friendship, organizations,
+                    events, and activities that make university life
+                    memorable.
+                </p>
+
+            </div>
+
+
+
+            <div class="gallery">
+
+                <!-- IMAGE 10 -->
+
+                <div class="gallery-image gallery-large">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people, crowd and text that says &quot;:2 a Delmiguez Mark John&quot;" style="width: 588px; height: 392px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.99422-6/730771772_2711733992544630_1050772193618778730_n.png?stp=dst-jpg_tt6&amp;cstp=mx2048x1365&amp;ctp=s2048x1365&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeF68frOeQ0f3V6kP4GZSMyzuURc5r_DhaS5RFzmv8OFpIj-ZAXQTYUSegD7kPVsKYwvHc-1EuFOsYHiBK3J8Oix&amp;_nc_ohc=wViA0QiKRp4Q7kNvwEoRit2&amp;_nc_oc=Adreh6JrLc2tT_fMKAZxeSNKD8MyI10brwwAGkAebxay4KCrcuE6P2tZ5VX75dISHbU&amp;_nc_zt=14&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=Pl3dOVu5T4-K3jbVoDeLwA&amp;_nc_ss=7b2a8&amp;oh=00_AQIdExLGQFHUKnCibE8Fi9duFPziRN7XLTeM5lMabM-OwA&amp;oe=6AAD2DDA">
+                </div>
+
+                <!-- IMAGE 11 -->
+
+                <div class="gallery-image">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of television and text" style="width: 294px; height: 190px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/724578089_1580009660801322_2011518482175578865_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1920x1080&amp;ctp=s1920x1080&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_eui2=AeHq56cAY8k67Cylu3ILgMwT7skB6Ljx3gvuyQHouPHeC6LR3c2OCKLSnAlfsbMf7kF51KrKXCWRjQ7yHuh5VL42&amp;_nc_ohc=ZxJiCpCf-tYQ7kNvwERmi0_&amp;_nc_oc=Adon4FDOsqyFdEXcnEPl1FBs7byl4AN6IGK7Z9fXuGbRyMR0RVgsGwiuXVuthuaCsMU&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=ixdB7j4FChHgGBf4ew7x8w&amp;_nc_ss=7b2a8&amp;oh=00_AQJD4jl5LSxhMRwHQ0_-PDwiej4TtJpyb5dc-eLaDN8NZA&amp;oe=6AAD2465">
+                </div>
+
+                <!-- IMAGE 12 -->
+
+                <div class="gallery-image">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people, speaker, crowd and text" style="width: 294px; height: 190px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/724578092_1580009667467988_7228240327518418805_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1920x1080&amp;ctp=s1920x1080&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_eui2=AeHI3FKzx14iDIzp3rTubZP1-E3PMl0FHnX4Tc8yXQUedYYzfeAkQra0_upJDJhW9ybNPj5-G2kT76TpV_XA0q8t&amp;_nc_ohc=wj_BApB7v2MQ7kNvwFgBpc1&amp;_nc_oc=Adoj48Gr8PNf5uZHtqu8t3oRNflrVZl7tfZTYQdE_K83yyLwS5wGLOeMisN5vXcEiho&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=ThJP2KxEkfa_LSLHz0x2CA&amp;_nc_ss=7b2a8&amp;oh=00_AQJsW7vHjyPsJ6OkmDrIfGDbwxNpfQsAZGCUVBTABzlAEQ&amp;oe=6AAD39F1">
+                </div>
+
+                <!-- IMAGE 13 -->
+
+                <div class="gallery-image">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of text that says &quot;2lninersitn of Cabunao NNGCAB IACI COLLEGE COLLEGEOFEDUCATION របាត់ារខញ 物 GASH tuẨn COED DONATION DRIVE BARANGAY BACLARAN PNC COLLEGE OF EDUCATION COEDCSG@PNC.EDU.PH&quot;" style="width: 294px; height: 190px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/772676833_1634094335392854_5240967350894985755_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2000x1414&amp;ctp=s2000x1414&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_eui2=AeHnaTEJjk4cJsZrHTIt7BKdIpJWXQkHTBgiklZdCQdMGNJ40I9Lf6jOEe7GSG8f7EJkoGfE-ryw9nZRxZvfOYxB&amp;_nc_ohc=-hcCZHJKjB8Q7kNvwFPO8hH&amp;_nc_oc=AdqTMv_5scWQfEzvRDSsCYaG7Je05ssB3sE0RINSCekhkvDIuHoo7Bth1E3BP3T_twE&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=qA9zKnzYA1a3TxboAtbV2w&amp;_nc_ss=7b2a8&amp;oh=00_AQL-QTUVkwk3dTeorof4bEmtXKvV-r5dXSwGNdBuaRMGiQ&amp;oe=6AAD3BDE">
+                </div>
+
+                <!-- IMAGE 14 -->
+
+                <div class="gallery-image">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of text" style="width: 294px; height: 190px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/754202282_1085879701050969_477595349605452866_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1365&amp;ctp=s2048x1365&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeF5T_mykOyi78tAg9t1rlgQR54VenQcCtpHnhV6dBwK2jF-dnzrUYqtwBKBe_DLE8Kxy-szV3N7upTs0Nf_Vdsm&amp;_nc_ohc=AiZMaStsrrkQ7kNvwFTkxdT&amp;_nc_oc=AdpmuRCIo6bY9Pn5WiqR0fIEjnLk3mWRm6KV5XplxZ-7KGUC8tvi4Syt59IIfx2gDmo&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=FWMX1bxRzlkFkG1VvMyjJw&amp;_nc_ss=7b2a8&amp;oh=00_AQJqz7Whd5OhyQbJoUzOkcRXlmjPNuXRJNyYUnISzrtE8Q&amp;oe=6AAD3835">
+                </div>
+
+                <!-- IMAGE 15 -->
+
+                <div class="gallery-image">
+                    <img data-visualcompletion="media-vc-image" class="x15mokao x1ga7v0g x16uus16 xbiv7yw x1bwycvy x193iq5w x4fas0m x19kjcj4" alt="May be an image of one or more people and crowd" style="width: 588px; height: 190px;" src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/756044051_1085879694384303_4881016384337081678_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x1365&amp;ctp=s2048x1365&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_eui2=AeGj9vmvNfrJ-NEDpelsq6SGRKAq1eK6SFFEoCrV4rpIUaNzQcbiNesomq5nwsaRuagEltNhehKHdAnTCeX6ao5T&amp;_nc_ohc=RksywuvkorAQ7kNvwFNn7uX&amp;_nc_oc=AdoRvE7vwi8GMmAChhM73T_WCyIk5UfxPZjE8v0bdYOLR7ynItliP5Bb6rlKR8xm1F4&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=83ngvYsKWJ59nYpD8DLM4w&amp;_nc_ss=7b2a8&amp;oh=00_AQK8xLjQTvNj9pvRfz2wmGCgZu1yI4c6_6AI6DBRZ-I4ug&amp;oe=6AAD2017">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         STUDENT LIFE
+    ========================================== -->
+
+    <section class="student-life">
+
+        <div class="container">
+
+            <div class="center-title">
+
+                <span class="section-label">
+                    STUDENT EXPERIENCE
+                </span>
+
+                <h2 class="section-title">
+                    More than just academics
+                </h2>
+
+            </div>
+
+
+
+            <div class="student-grid">
+
+
+                <div class="student-box">
+
+                    <h3>
+                        Student Organizations
+                    </h3>
+
+                    <p>
+                        Join organizations and communities where
+                        you can discover your interests, develop
+                        leadership skills, and meet new people.
+                    </p>
+
+                </div>
+
+
+                <div class="student-box">
+
+                    <h3>
+                        Campus Activities
+                    </h3>
+
+                    <p>
+                        Participate in events, competitions,
+                        celebrations, and activities that make
+                        student life exciting.
+                    </p>
+
+                </div>
+
+
+                <div class="student-box">
+
+                    <h3>
+                        Student Support
+                    </h3>
+
+                    <p>
+                        Access services and resources designed
+                        to support your academic and personal
+                        development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container contact-grid">
+
+
+            <div>
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2 class="section-title">
+                    We would love to hear from you.
+                </h2>
+
+                <p>
+                    Have questions about admissions, academic
+                    programs, or university services? Contact us
+                    through the information provided.
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-info">
+
+                <div>
+
+                    <strong>
+                        📍 ADDRESS
+                    </strong>
+
+                    <p>
+                        Banay-Banay, Cabuyao, Philippines, 4025
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        ☎ CONTACT
+                    </strong>
+
+                    <p>
+                        (049) 000-0000
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        ✉ EMAIL
+                    </strong>
+
+                    <p>
+                        University of Cabuyao@pnc.edu.ph
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="container footer-main">
+
+
+            <div>
+
+                <h3>
+                    UNIVERSITY OF CABUYAO
+                </h3>
+
+                <p>
+                    Excellence • Service • Integrity
+                </p>
+
+                <br>
+
+                <p>
+                    Preparing students for meaningful
+                    careers, responsible citizenship,
+                    and lifelong learning.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    UNIVERSITY
+                </h4>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Administration
+                </a>
+
+                <a href="#">
+                    Offices
+                </a>
+
+                <a href="#">
+                    University Policies
+                </a>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    ACADEMICS
+                </h4>
+
+                <a href="#academics">
+                    Programs
+                </a>
+
+                <a href="#">
+                    Colleges
+                </a>
+
+                <a href="#">
+                    Academic Calendar
+                </a>
+
+                <a href="#">
+                    Student Services
+                </a>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    CONNECT
+                </h4>
+
+                <a href="#contact">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                © 2026 University of Cabuyao.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        function openMenu() {
+
+            const nav =
+                document.getElementById("navigation");
+
+            nav.classList.toggle("active");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
